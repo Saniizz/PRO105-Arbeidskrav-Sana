@@ -1,8 +1,8 @@
 body {
     display: flex;
-    flex-direction: column;  /* legger elementene oppå hverandre */
-    align-items: center;     /* midtstiller horisontalt */
-    justify-content: flex-start; /* plasser øverst, ikke midt */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
     background-color: #fad9dd;
@@ -46,14 +46,14 @@ h1 {
     width: 500px;
     cursor: pointer;
     margin-top: 40px;
+    transition: 1s;
 }
 
 .envelope:hover{
-    transition: 1s;
     width: 600px;
 }
 
-/* Effects */
+
 .confetti {
     position: fixed;
     top: 0;
@@ -62,7 +62,7 @@ h1 {
     height: 100%;
     pointer-events: none;
     overflow: hidden;
-    z-index: -1; /* legger effekten bak innholdet */
+    z-index: -1;
 }
 
 .confetti span {
@@ -76,7 +76,7 @@ h1 {
     animation: fall linear infinite;
 }
 
-/* variasjoner i form og farge av confetti*/
+
 .confetti span:nth-child(3n) {
     background: #f6a6b4;
     border-radius: 0;
@@ -89,7 +89,7 @@ h1 {
     height: 12px;
 }
 
-/* plasser dem tilfeldig og gi forskjellig fart */
+
 .confetti span:nth-child(1)  { left: 5%;  animation-duration: 3s; animation-delay: 0s; }
 .confetti span:nth-child(2)  { left: 15%; animation-duration: 4s; animation-delay: 1s; }
 .confetti span:nth-child(3)  { left: 25%; animation-duration: 2.5s; animation-delay: 0.5s; }
@@ -112,7 +112,6 @@ h1 {
 .confetti span:nth-child(10) { left: 95%; animation-duration: 2.6s; animation-delay: 1s; }
 
 
-/* fallet av confetti */
 @keyframes fall {
     0%   { transform: translateY(0) rotate(0deg);   opacity: 1; }
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
